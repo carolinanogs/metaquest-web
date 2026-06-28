@@ -7,7 +7,7 @@ import {
   type GoalType,
 } from "@/lib/metaquest/types";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3333";
+const API_BASE_URL = normalizeApiBaseUrl(import.meta.env.VITE_API_URL ?? "http://localhost:3333");
 const AUTH_TOKEN_KEY = "metaquest_auth_token";
 const LEGACY_STORAGE_KEYS = ["metaquest_users", "metaquest_current_user_id", "metaquest_goals"];
 
@@ -71,6 +71,12 @@ export class ApiError extends Error {
   }
 }
 
+function normalizeApiBaseUrl(value: string) {
+  const trimmed = value.trim().replace(/\/+$/, "");
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
+}
+
 export function getAuthToken() {
   if (typeof window === "undefined") return null;
   return localStorage.getItem(AUTH_TOKEN_KEY);
@@ -109,10 +115,27 @@ async function apiRequest<T>(path: string, options: ApiOptions = {}) {
   }
 
   const text = await response.text();
-  const data = text ? JSON.parse(text) : null;
+  let data: unknown = null;
+
+  if (text) {
+    try {
+      data = JSON.parse(text);
+    } catch {
+      throw new ApiError(
+        response.ok
+          ? "O backend retornou uma resposta inválida."
+          : "Endpoint da API não encontrado. Verifique a URL do backend.",
+        response.status,
+      );
+    }
+  }
 
   if (!response.ok) {
-    throw new ApiError(data?.message ?? "O backend retornou um erro.", response.status);
+    const message =
+      data && typeof data === "object" && "message" in data && typeof data.message === "string"
+        ? data.message
+        : "O backend retornou um erro.";
+    throw new ApiError(message, response.status);
   }
 
   return data as T;
