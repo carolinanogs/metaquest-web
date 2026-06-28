@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="title desc">
+  <title id="title">Tela de metas do MetaQuest</title>
+  <desc id="desc">Lista mobile de metas com filtros por tipo e categoria.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="390" height="844" rx="34" fill="url(#bg)"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="16" y="58" font-size="25" font-weight="900" fill="#0f172a">Minhas metas</text>
+    <g transform="translate(16 84)">
+      <rect x="0" y="0" width="70" height="34" rx="17" fill="#4f46e5"/>
+      <text x="35" y="22" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">Todas</text>
+      <rect x="80" y="0" width="82" height="34" rx="17" fill="#fff" stroke="#e2e8f0"/>
+      <text x="121" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#64748b">Diarias</text>
+      <rect x="172" y="0" width="112" height="34" rx="17" fill="#fff" stroke="#e2e8f0"/>
+      <text x="228" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#64748b">Longo prazo</text>
+      <rect x="294" y="0" width="86" height="34" rx="17" fill="#fff" stroke="#e2e8f0"/>
+      <text x="337" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#64748b">Estudos</text>
+    </g>
+    <rect x="16" y="144" width="358" height="92" rx="20" fill="#fff" stroke="#e2e8f0"/>
+    <rect x="32" y="163" width="76" height="24" rx="12" fill="#dbeafe"/>
+    <text x="70" y="180" text-anchor="middle" font-size="11" font-weight="800" fill="#1d4ed8">Profissional</text>
+    <text x="32" y="209" font-size="16" font-weight="850" fill="#0f172a">Planejar o dia</text>
+    <text x="32" y="226" font-size="12" fill="#64748b">Meta diaria • +10 XP</text>
+    <circle cx="339" cy="190" r="18" fill="#dcfce7"/>
+    <path d="M331 190l6 6 12-15" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="16" y="250" width="358" height="106" rx="20" fill="#fff" stroke="#e2e8f0"/>
+    <rect x="32" y="269" width="62" height="24" rx="12" fill="#e0e7ff"/>
+    <text x="63" y="286" text-anchor="middle" font-size="11" font-weight="800" fill="#4338ca">Estudos</text>
+    <text x="32" y="315" font-size="16" font-weight="850" fill="#0f172a">Estudar React</text>
+    <text x="32" y="338" font-size="12" fill="#64748b">60% em andamento • +25 XP</text>
+    <rect x="220" y="330" width="112" height="9" rx="5" fill="#e2e8f0"/>
+    <rect x="220" y="330" width="68" height="9" rx="5" fill="#4f46e5"/>
+
+    <rect x="16" y="370" width="358" height="106" rx="20" fill="#fff" stroke="#e2e8f0"/>
+    <rect x="32" y="389" width="58" height="24" rx="12" fill="#d1fae5"/>
+    <text x="61" y="406" text-anchor="middle" font-size="11" font-weight="800" fill="#047857">Saude</text>
+    <text x="32" y="435" font-size="16" font-weight="850" fill="#0f172a">Caminhada de 30 minutos</text>
+    <text x="32" y="458" font-size="12" fill="#64748b">Nao iniciada • +10 XP</text>
+    <circle cx="339" cy="423" r="18" fill="#f8fafc" stroke="#cbd5e1"/>
+
+    <rect x="16" y="490" width="358" height="112" rx="20" fill="#fff" stroke="#e2e8f0"/>
+    <rect x="32" y="509" width="68" height="24" rx="12" fill="#ffe4e6"/>
+    <text x="66" y="526" text-anchor="middle" font-size="11" font-weight="800" fill="#be123c">Projetos</text>
+    <text x="32" y="555" font-size="16" font-weight="850" fill="#0f172a">Lancar portfolio</text>
+    <text x="32" y="578" font-size="12" fill="#64748b">Longo prazo • 75% • +50 XP</text>
+    <rect x="220" y="570" width="112" height="9" rx="5" fill="#e2e8f0"/>
+    <rect x="220" y="570" width="84" height="9" rx="5" fill="#e11d48"/>
+
+    <rect x="16" y="616" width="358" height="92" rx="20" fill="#fff" stroke="#e2e8f0"/>
+    <rect x="32" y="635" width="70" height="24" rx="12" fill="#fef3c7"/>
+    <text x="67" y="652" text-anchor="middle" font-size="11" font-weight="800" fill="#b45309">Financas</text>
+    <text x="32" y="681" font-size="16" font-weight="850" fill="#0f172a">Organizar financas do mes</text>
+    <text x="32" y="698" font-size="12" fill="#64748b">Concluida • +25 XP</text>
+
+    <rect x="0" y="764" width="390" height="80" fill="#fff" stroke="#e2e8f0"/>
+    <text x="54" y="812" text-anchor="middle" font-size="12" fill="#64748b">Inicio</text>
+    <text x="142" y="812" text-anchor="middle" font-size="12" font-weight="800" fill="#4f46e5">Metas</text>
+    <text x="247" y="812" text-anchor="middle" font-size="12" fill="#64748b">Conquistas</text>
+    <text x="337" y="812" text-anchor="middle" font-size="12" fill="#64748b">Perfil</text>
+  </g>
+</svg>
